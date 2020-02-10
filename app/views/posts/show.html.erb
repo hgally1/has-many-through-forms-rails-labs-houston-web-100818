@@ -1,12 +1,12 @@
 <h1><%= @post.title %></h1>
 <p>Content: <%= @post.content %></p>
 
+<p>
 Categories:<br/>
-<ul>
-    <%= @post.categories.each do |c| %>
-        <li><%= c.name %></li>
-        <% end %>
-</ul>
+<ul><% @post.categories.each do |cat| %>
+    <li><%= cat.name %></li>
+<% end %></ul>
+</p>
 
 <p>
 Commentors: <%= @post.users.uniq.each do |user| %>
